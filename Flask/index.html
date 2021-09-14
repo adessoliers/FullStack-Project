@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>US Emissions</title>
+  <!-- reset -->
+  <link rel="stylesheet" href="static/css/reset.css">
+  <!-- node/jquery -->
+  <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <!-- BOOTSTRAP -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"> 
+  <!-- CSS for jqueries -->
+  <link rel="stylesheet" href="static/css/slider.css">
+  <link rel="stylesheet" href="static/css/slider2.css">
+  <link rel="stylesheet" href="static/css/slider3.css">
+  <!-- D3.plotly -->
+  
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script><!--D3 cdn-->
+  <script src="//cdnjs.cloudflare.com/ajax/libs/numeral.js/2.0.6/numeral.min.js"></script>
+  <script src="https://d3js.org/d3.v5.min.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <!-- CSS FOR ALL -->
+  <link rel="stylesheet" href="static/css/style.css">
+
+  <link rel="shortcut icon" href="data:image/x-icon;," type="image/x-icon"> 
+</head>
+
+<body>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-md-12 jumbotron text-center">
+        <h1>US Emissions Dashboard</h1>
+        <p>Diving into the effects of emissions on air quality in the US</p>
+        <p>Use the interactive charts below to explore the dataset</p>
+      </div>
+    </div>
+
+    <div class="row" id="filter_row">
+      <div class="col-md-12">
+        <div class="filter_div">
+          <div class="row">
+            <div class="col-md-10">
+              <h4>Slide me! </h4>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3">
+              <div id="slider_year" name="slider_year" style="height:10px; width:85%;"></div>
+            </div>
+            <div class="col-md-3">
+              <label for="selected">Selected Year: </label>
+              <input type="text" id="selected" name="selected" readonly class="input_short">
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- <div class="row">
+      <div class="col-md-2">
+        <div class="well">
+          <h4><strong>State:</strong></h4>
+          <select id="selDataset" onchange="optionChanged(this.value)"></select>
+        </div>
+        <div class="panel panel-primary">
+          <div class="panel-heading">
+            <h3 class="panel-title"><strong>Emissions</strong></h3>
+          </div>
+          <div id="sample-metadata" class="panel-body"></div>
+        </div>
+      </div>
+      <div class="col-md-5">
+        <div id="air-bar"></div>
+      </div>
+      <div class="col-md-5">
+        <div id="emissions-bar"></div>
+      </div>
+    </div> -->
+    <div class="row">
+      <div class="col-md-8">
+        <h5>Greenhouse Emissions (CO2)</h5>
+        <div id="chartChoro"></div>
+      </div>
+    </div>
+  </div>
+
+<!-- JS FILES -->
+<script src="static/js/jquery-ui.min.js"></script>
+<script src="static/js/slidertable.js"></script>
+<script src="static/js/variables2.js"></script>
+<script src="static/js/chloro.js"></script>
+
+
+  
+  
+  
+</body>
+</html>
